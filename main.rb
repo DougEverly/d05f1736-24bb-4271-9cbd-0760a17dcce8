@@ -109,3 +109,12 @@ episodes.each do |episode|
   c = Campaigns.from_campaigns(campaigns)
   puts format("%-10s: %s\n", episode[:id], c.insert_ads(episode))
 end
+
+# => 
+# kld-412   : +++++++++++++
+# abc-444   : +++++++++++++
+# dag-892   : ++++*AcmeC*++++*AcmeB*++++*CorpCorpB*
+# abc-123   : *CorpCorpA*++++*GiantGiraffeA*++++*GiantGiraffeB*++*TacoCat*++*CorpCorpB*
+# hab-812   : *FurryDogA**FurryDogB*++++*AcmeC*++++*AcmeB*++++
+# efa-931   : *FurryDogA**FurryDogB*++++++++++
+# paj-103   : ++++*GiantGiraffeA*+++++*GiantGiraffeB*++++++
