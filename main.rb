@@ -45,7 +45,7 @@ campaigns = [
 class Campaign
   def initialize(target)
     @target = target
-    @ads = Hash.new { |h, k| h[k] = [] }
+    @ads = Hash.new { |h, k| h[k] = [] } # ideally this would be a priority queue instead of array
   end
 
 # load up campaign with ads and it will sort them by revenue descending
